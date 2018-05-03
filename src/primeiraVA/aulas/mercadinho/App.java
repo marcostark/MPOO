@@ -4,11 +4,10 @@ public class App {
 		
 	public static void main(String[] args) {
 	
-		Usuario usuario = new Usuario();
-		usuario.setNome("admin");
-		usuario.setSenha("admin");
-		
-		System.out.println(Login.validaUsuario(usuario));
-		
+		Usuario user1 = new Usuario("admin", "adm");
+		Usuario user2 = new Usuario("login", "senha");
+
+		System.out.println(Login.validaUsuario(user1));
+				
 	}
 }

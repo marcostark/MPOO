@@ -7,16 +7,18 @@ public class Livro {
 	private double valor;
 	private String isbn;	
 	private Autor autor;
+	private boolean impresso;
 	
 	public Livro() {}
 	
-	public Livro(String nome, String descricao, double valor, String isbn,Autor autor) {
+	public Livro(String nome, String descricao, double valor, String isbn,Autor autor, boolean impresso) {
 		super();
 		this.nome = nome;
 		this.descricao = descricao;
 		this.valor = valor;
 		this.isbn = isbn;
 		this.autor = autor;
+		this.impresso = impresso;
 	}
 	public String getNome() {
 		return nome;
@@ -52,10 +54,17 @@ public class Livro {
 		this.autor = autor;
 	}
 	
-	public void aplicarDescontoDe(double porcetagem) {
+	public boolean aplicarDescontoDe(double porcetagem) {
+		if(porcetagem > 0.30) {
+			return false;
+		} 
 		this.valor -= this.valor * porcetagem;
+		return true;
 	}
 	
+	/***
+	 * O This é usado para se referir ao atributo da classe
+	 */	
 	
 	void mostraDetalhes() {
 		String msg = "Mostrando detalhes do livro";
@@ -65,7 +74,14 @@ public class Livro {
 		System.out.println("Valor: " + this.getValor());
 		System.out.println("ISBN: " + this.getIsbn());
 		System.out.println();
-		this.autor.mostrarDetalhes();
+		
+		if (this.temAutor()){
+			this.autor.mostrarDetalhes();
+		}
+	}
+	
+	boolean temAutor() {
+		return this.autor != null;
 	}
 	
 }
