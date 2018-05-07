@@ -6,6 +6,8 @@ public class Autor {
 	private String email;
 	private String cpf;
 	
+	public Autor() {}
+	
 	public Autor(String nome, String email, String cpf) {
 		super();
 		this.nome = nome;

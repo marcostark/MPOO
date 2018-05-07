@@ -1,6 +1,6 @@
 package primeiraVA.atividadesExtras.livraria;
 
-public class Livro {
+public abstract class Livro {
 
 	private String nome;
 	private String descricao;
@@ -20,6 +20,12 @@ public class Livro {
 		this.autor = autor;
 		this.impresso = impresso;
 	}
+	
+	public Livro(Autor autor) {
+		this();
+		this.autor = autor;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -55,11 +61,7 @@ public class Livro {
 	}
 	
 	public boolean aplicarDescontoDe(double porcetagem) {
-		if(porcetagem > 0.30) {
-			return false;
-		} 
-		this.valor -= this.valor * porcetagem;
-		return true;
+		return false;
 	}
 	
 	/***

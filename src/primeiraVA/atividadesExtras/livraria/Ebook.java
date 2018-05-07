@@ -4,6 +4,9 @@ public class Ebook extends Livro{
 	
 	private String waterMark;
 	
+	
+	public Ebook() {}
+	
 	public Ebook(String nome, String descricao, double valor, String isbn,Autor autor, boolean impresso) {
 		super(nome, descricao, valor, isbn, autor, impresso);		
 	}

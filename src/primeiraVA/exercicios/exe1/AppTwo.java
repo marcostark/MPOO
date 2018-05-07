@@ -1,4 +1,4 @@
-package primeiraVA.exercicios.execProgramaExterno;
+package primeiraVA.exercicios.exe1;
 import javax.swing.JOptionPane;
 
 public class AppTwo {
