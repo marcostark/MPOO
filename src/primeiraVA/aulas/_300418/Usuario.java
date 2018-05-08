@@ -1,4 +1,4 @@
-package primeiraVA.aulas.mercadinho;
+package primeiraVA.aulas._300418;
 
 public class Usuario {
 
@@ -26,6 +26,7 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}		
+	
 	// Liberar memoria com o garbage coletor
 	public static void destroyer(Usuario usuario) {
 		usuario = null;
