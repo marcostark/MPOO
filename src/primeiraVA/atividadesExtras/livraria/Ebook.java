@@ -1,6 +1,6 @@
 package primeiraVA.atividadesExtras.livraria;
 
-public class Ebook extends Livro{
+public class Ebook extends Livro implements Promocional{
 	
 	private String waterMark;
 	
@@ -19,7 +19,6 @@ public class Ebook extends Livro{
 		this.waterMark = waterMark;
 	}
 	
-	@Override
 	public boolean aplicarDescontoDe(double porcetagem) {
 		if(porcetagem > 0.15) {
 			return false;

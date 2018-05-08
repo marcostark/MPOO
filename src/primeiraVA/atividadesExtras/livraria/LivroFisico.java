@@ -1,12 +1,12 @@
 package primeiraVA.atividadesExtras.livraria;
 
-public class LivroFisico extends Livro{
+public class LivroFisico extends Livro implements Promocional{
 	
 	public LivroFisico(Autor autor) {
 		super(autor);
 	}
 	
-	public boolean aplicaDescontoDe(double porcetagem) {
+	public boolean aplicarDescontoDe(double porcetagem) {
 		if(porcetagem > 0.3) {
 			return false;
 		} 

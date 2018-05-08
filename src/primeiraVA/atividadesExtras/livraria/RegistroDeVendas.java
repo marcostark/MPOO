@@ -10,6 +10,7 @@ public class RegistroDeVendas {
 		LivroFisico livroFisico = new LivroFisico(autor);
 		livroFisico.setNome("Test-Driven Development");
 		livroFisico.setValor(59.90);
+		livroFisico.aplicarDescontode10Porcento();
 		
 		Ebook ebook = new Ebook();
 		ebook.setAutor(autor);

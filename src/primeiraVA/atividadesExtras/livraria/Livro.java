@@ -1,6 +1,15 @@
 package primeiraVA.atividadesExtras.livraria;
 
-public abstract class Livro {
+public abstract class Livro implements Produto{
+	
+	/*
+	 * Uma classe abstrata não pode ser instanciada
+	 * Não pode existir metodos abstratos em classes que não sejam abstratas
+	 * Um classe abstrata pode ter metodos abstratos e concretos
+	 * Toda classe filha da classe abstrata precisa implementar os metodos abstratos
+	 * da classe pai, a menos que a mesma seja tambem abstrata.
+	 * 
+	 * */
 
 	private String nome;
 	private String descricao;
@@ -60,9 +69,11 @@ public abstract class Livro {
 		this.autor = autor;
 	}
 	
-	public boolean aplicarDescontoDe(double porcetagem) {
-		return false;
-	}
+//	/* CAP 8
+//	 * Metodo abstrato para obrigar a implementação do mesmo nas classes
+//	 * filhas. P.S.: Apenas classes abstratas podem ter metodos abstratos.
+//	 * */
+//	public abstract boolean aplicarDescontoDe(double porcetagem);
 	
 	/***
 	 * O This é usado para se referir ao atributo da classe
