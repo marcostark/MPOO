@@ -1,6 +1,11 @@
 package primeirava.atividadesextras.livraria.produtos;
 
-public interface Produto {
+/*
+ * Como Produto é uma interface, ele herdará as obrigações da 
+ * interface "Comparable". As classes que implementam "Produto"
+ * possuem a obrigação de implementar o metodo "compareTo"
+ * */
+public interface Produto extends Comparable<Produto>{
 	
 	/*
 	 * Uso do modificador é abstract, uma vez que todo metodo

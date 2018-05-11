@@ -1,5 +1,7 @@
 package primeirava.atividadesextras.livraria.teste;
 
+import java.util.List;
+
 import primeirava.atividadesextras.livraria.Autor;
 import primeirava.atividadesextras.livraria.produtos.Ebook;
 import primeirava.atividadesextras.livraria.produtos.LivroFisico;
@@ -28,8 +30,12 @@ public class RegistroDeVendas {
 		
 		System.out.println("Total: " + carrinho.getTotal());
 		
-		Produto[] produtos = carrinho.getProdutos();
-		
+		List<Produto> produtos = carrinho.getProdutos();
+				
+		/*
+		 * "enhanced for" funciona com qualquer List, na verdade funciona com 
+		 * qualquer Iterable
+		 * */
 		try {
 			for (Produto produto: produtos) {
 				if (produto != null) {

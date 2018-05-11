@@ -42,5 +42,20 @@ public class Revista implements Produto, Promocional{
 		setValor(getValor() - desconto);
 		return true;
 	}
+	
+	/*
+	 * Deve implementar o metodo, pode não ser classe filha de livro, 
+	 * mas implementa a interface produto.
+	 * */
+	@Override
+	public int compareTo(Produto outro) {
+		if(this.getValor() < outro.getValor()) {
+			return -1;
+		}
+		if(this.getValor() > outro.getValor()) {
+			return 1;
+		}
+		return 0;
+	}
 
 }

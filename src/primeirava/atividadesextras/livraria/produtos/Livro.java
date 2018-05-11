@@ -106,4 +106,28 @@ public abstract class Livro implements Produto{
 		return this.autor != null;
 	}
 	
+	/* 
+	 * Implementando metodo da interface produto
+	 * replicando assim para as classes filhas
+	 * */
+//	@Override
+//	public int compareTo(Produto outro) {
+//		if(this.getValor() < outro.getValor()) {
+//			return -1;
+//		}
+//		if(this.getValor() > outro.getValor()) {
+//			return 1;
+//		}
+//		return 0;
+//	}
+	
+	/*
+	 * Outro meio para comparação seria retornar apenas a subtração
+	 * de uma valor pelo outro.
+	 * */
+	@Override
+	public int compareTo(Produto outro) {
+		return (int) (this.getValor() - outro.getValor());
+	}
+	
 }
