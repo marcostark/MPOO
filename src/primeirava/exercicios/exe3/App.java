@@ -4,7 +4,13 @@ public class App {
 	
 	public static void main(String[] args) {
 		
-	Racional homem = (Racional) new SerHumano("Humano");
+	SerHumano homem = new SerHumano("Marcos");
+	homem.falar();
+	homem.andar();
+	
+	Cachorro cachorro = new Cachorro("Zeus");
+	cachorro.emitirSom();
+	cachorro.andar();
 		
 		
 	}

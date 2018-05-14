@@ -11,6 +11,7 @@ public abstract class Animal {
 	
 	public String getNome() {
 		return nome;
-	}
-	
+	}	
+	public abstract void andar();
+		
 }
