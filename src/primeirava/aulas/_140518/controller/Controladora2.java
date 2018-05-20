@@ -26,7 +26,9 @@ public class Controladora2 {
 		this.control();
 	}
 	
-	// Apenas o proprio botão conhece o seu evento, não precisa de comparação
+	/*
+	 *Apenas o proprio botão conhece o seu evento, não precisa de comparação 
+	 **/
 	public void control() {
 		login.getConfirmarButton().addActionListener(new ActionListener() {
 			
