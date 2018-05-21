@@ -124,7 +124,7 @@ mesmo absolutamente antes de um programa terminar" - DEITEL
 	me.wichCall()
 
 ### QUESTIONAMENTO 7: Como obrigar as especializações a implementarem os metodos. Animal anda, mas em pé ou de quatro patas
-	Uma das implementações possivél é por meio de métodos abstratos, onde as classes filhas(Concretas) serão obrigadas a implementas tais métodos.
+Uma das implementações possivél é por meio de métodos abstratos, onde as classes filhas(Concretas) serão obrigadas a implementas tais métodos.
 
 ### EXERICIO 4: MAPA mental sobre o que foi visto nas aulas passadas
 
