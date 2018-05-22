@@ -37,7 +37,7 @@ public class Controller {
 		login.getConfirmarButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Login!");
+				Mensagem.exibirMensagem("Login!");
 			}
 		});
 		
@@ -51,20 +51,20 @@ public class Controller {
 		cadastro.getConfirmarButton().addActionListener(new ActionListener() {					
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Confirmar Cadastro!");		
+				Mensagem.exibirMensagem("Adicionar Usuario!");		
 			}
 			
 		});
 		cadastro.getSairButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Sair do cadastro!");
+				Mensagem.exibirMensagem("Remover Usuario!");
 			}
 		});
 		cadastro.getExibirButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Exibir Botão");
+				Mensagem.exibirMensagem("Mostrar Usuarios");
 			}
 		});
 	}

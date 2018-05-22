@@ -25,9 +25,6 @@ public class Login extends JFrame{
 	private JButton removeButton;
 	private JButton exibirButton;
 	
-	//public Login(String tituloJanela, int x, int y, String nomeButao1, String nomeButao2) {
-	//	super(tituloJanela);
-	//}
 	
 	public Login(String tituloJanela, int x, int y, String nomeButao1, String nomeButao2) {
 		super(tituloJanela);		
