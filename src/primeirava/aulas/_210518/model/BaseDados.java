@@ -1,38 +1,60 @@
 package primeirava.aulas._210518.model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class BaseDados {
 	
 //	private static Usuario userCadastrado = new Usuario("Marcos", "123");
-	private static Usuario user1 = new Usuario("Marcos", "0123");
-	private static Usuario user2 = new Usuario("Patricia", "1234");
+//	private static Usuario user1 = new Caixa("Marcos", "0123");
+//	private static Usuario user2 = new Gerente("Patricia", "1234");
 	
-	private static List<Usuario> usuarios = Arrays.asList(user1,user2);
+//	private static List<Usuario> usuarios = Arrays.asList(user1,user2);
+	private static List<Usuario> usuarios = new ArrayList<Usuario>();
 	
+	public boolean addUsuario(Usuario usuario) {
+		
+		for (Usuario user: usuarios) {
+			if(user.getLogin().equalsIgnoreCase(user.getLogin())) {
+				return false;
+			}
+		}
+			return usuarios.add(usuario);
+	}
 	
-	// CRUD -> Create, Read, Update, Delete
-	
-//	public static boolean buscarUsuario(Usuario user) {
-//		
-//		if(user.getLogin().equalsIgnoreCase(userCadastrado.getLogin()) 
-//				&& user.getSenha().equals(userCadastrado.getSenha())) {
-//			return true;
-//		}
-//		
-//		return false;
-//	}
-	
-	public static boolean buscarUsuario(Usuario user) {
-	
-		for(Usuario usuario: usuarios) {
-			//System.out.println("Login:  " + usuario.getLogin() + " Senha: " + usuario.getSenha());
-			if(user.getLogin().equalsIgnoreCase(usuario.getLogin()) 
-					&& user.getSenha().equals(usuario.getSenha())) {
-				return true;
+	public boolean removeUsuario(Usuario usuario) {
+		for(Usuario user: usuarios) {
+			if(user.getLogin().contains(usuario.getLogin())) {
+				return usuarios.remove(usuario);
 			}
 		}
 		return false;
-	}	
+	}
+	
+	public static void exibirUsuario() {
+		usuarios.forEach(l -> System.out.println(l.getLogin()));		
+	}
+		
+	// É possivel implementar de outra forma
+	public static boolean validarUsuario(Usuario usuario) {
+		/*
+		for(Usuario user: usuarios) {
+			if(user.getLogin().contains(usuario.getLogin())
+					&& user.getLogin().equals(usuario.getSenha())) {
+				return true;
+			}
+		}*/
+		
+		return  usuarios.contains(usuario);
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Usuario user1 = new Caixa("Marcos", "0123");
+		BaseDados.validarUsuario(user1);
+		
+	}
+	
 }

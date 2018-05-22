@@ -5,67 +5,100 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 /*
  * MVC com tratamenteo de Eventos na propria classe
  * */
-public class Login extends JFrame {
+public class Login extends JFrame{
 	
-	private JLabel loginLabel, senhaLabel;
 	private JButton confirmarButton;
 	private JButton sairButton;
-	private JTextField loginField ;
-	private JPasswordField senhaField;
 	
-	public Login() {
-		super("Login");
+	private JTextField loginField;
+	private JTextField senhaField;
+	
+	private JLabel loginLabel;
+	private JLabel senhaLabel;
+	
+	private JButton addButton;
+	private JButton removeButton;
+	private JButton exibirButton;
+	
+	//public Login(String tituloJanela, int x, int y, String nomeButao1, String nomeButao2) {
+	//	super(tituloJanela);
+	//}
+	
+	public Login(String tituloJanela, int x, int y, String nomeButao1, String nomeButao2) {
+		super(tituloJanela);		
 		
-		setSize(120, 180);
-		setResizable(false);
+		setSize(x, y);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new FlowLayout());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setResizable(false);
 		
-		loadComponents();
+		confirmarButton = new JButton(nomeButao1);
+		sairButton = new JButton(nomeButao2);
 		
-		setVisible(true);
-	}
-	
-	
-	public void loadComponents() {
+		loginField = new JTextField(5);
+		senhaField = new JTextField(5);
 		
 		loginLabel = new JLabel("Login");
 		senhaLabel = new JLabel("Senha");
-		confirmarButton = new JButton("Entrar");
-		sairButton = new JButton("Sair");
-		loginField = new JTextField(5);
-		senhaField = new JPasswordField(5);
 		
+		
+		// Criar tela abstrata e suas especializações implementarão os add's
+		// Adicionar nas especializações
+		// No cadastro adicionar o sexo como atributo de usuario
 		add(loginLabel);
 		add(loginField);
 		add(senhaLabel);
 		add(senhaField);
 		add(confirmarButton);
-		add(sairButton);
+		add(sairButton);		
+		
+		setVisible(true);		
+		
 		
 	}
+
+
 
 	public JButton getConfirmarButton() {
 		return confirmarButton;
 	}
 
+
+
+	public JButton getSairButton() {
+		return sairButton;
+	}
+
+
+
 	public JTextField getLoginField() {
 		return loginField;
 	}
+
+
 
 	public JTextField getSenhaField() {
 		return senhaField;
 	}
 
-	public JButton getSairButton() {
-		return sairButton;
+
+
+	public JLabel getLoginLabel() {
+		return loginLabel;
+	}
+
+
+
+	public JLabel getSenhaLabel() {
+		return senhaLabel;
 	}
 	
+	
 }
+
