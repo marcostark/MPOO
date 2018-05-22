@@ -130,15 +130,15 @@ Uma das implementações possivél é por meio de métodos abstratos, onde as cl
 
 ### EXERICIO 5: Aula 16: Separar a classe ButtonHundler em outro arquivo
 
-### EXERICIO 5: Modelar um objeto Corpo usando agregação
+### EXERICIO 6: Modelar Corpo Humano usando agregação
 
-### QUESTIONAMENTO 8: Refazer o remover o usuario
+### EXERICIO 7: Refazer o removoção de usuario usando outros metodos
 
-### QUESTIONAMENTO 9: Implementar o metodo toString na classe abstrata usuario, e implementar também em suas especializações, so que com seus devidos atributos
+### EXERICIO 8: Implementar o metodo toString na classe abstrata usuario, e implementar também em suas especializações, porém, com suas particularidades
 
-### QUESTIONAMENTO 10: Buscar usuarios usando o metodos .contains
+### EXERICIO 9: Buscar usuarios usando o metodo .contains
 
-### QUESTIONAMENTO 11: Criar tela abstrata (Login) e suas especializações implementarão os add's no cadastro adicionar o sexo como atributo de usuario
+### EXERICIO 10: Criar tela abstrata (Login) e suas especializações implementarão adicionarão os elementos na tela. Na  tela de cadastro será preciso informar o sexo do usuario (Implementar atributo "sexo" na classe usuario)
 		
 
 
