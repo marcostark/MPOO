@@ -11,4 +11,6 @@ public class Gerente extends Usuario{
 	}
 	
 	public void darDesconto() {}
+	
+	// Implementar metodo toString
 }

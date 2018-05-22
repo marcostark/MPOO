@@ -12,6 +12,6 @@ public class Caixa extends Usuario{
 	
 	public void vender() {}
 	
-	// Implementar metedo to string
+	// Implementar metodo toString
 
 }

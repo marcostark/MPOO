@@ -16,7 +16,7 @@ public class Controller {
 	private BaseDados baseDados;
 
 	/* 
-	 * Os models e views são atributos do controlador,
+	 * Models e views são atributos do controlador,
 	 * depende da aplicação, se serão criados aqui ou não
 	 *  
 	 * */
@@ -32,7 +32,7 @@ public class Controller {
 	}
 	
 	
-	// Usando classe internar anônima para tratar os eventos
+	// Usando classe interna anônima para tratar os eventos
 	public void control() {
 		login.getConfirmarButton().addActionListener(new ActionListener() {			
 			@Override

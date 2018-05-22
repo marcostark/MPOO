@@ -6,11 +6,6 @@ import java.util.List;
 
 public class BaseDados {
 	
-//	private static Usuario userCadastrado = new Usuario("Marcos", "123");
-//	private static Usuario user1 = new Caixa("Marcos", "0123");
-//	private static Usuario user2 = new Gerente("Patricia", "1234");
-	
-//	private static List<Usuario> usuarios = Arrays.asList(user1,user2);
 	private static List<Usuario> usuarios = new ArrayList<Usuario>();
 	
 	public boolean addUsuario(Usuario usuario) {
