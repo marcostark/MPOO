@@ -1,8 +1,7 @@
 # MPOO
 Códigos da disciplina de Modelagem e Programação Orientada a Objetos
 
-### Site da disciplina: 
-	[Flex Grid](http://sites.google.com/site/profricodemery/mpoo)
+### Site da disciplina: http://sites.google.com/site/profricodemery/mpoo
 
 ### Data das avaliações: 
     VA 1 - 18/06 

@@ -8,7 +8,7 @@ import primeirava.aulas._210518.view.Login;
 import primeirava.aulas._210518.view.Mensagem;
 import primeirava.aulas._210518.view.Cadastro;
 
-// MVC tratado na propria classe
+// MVC 
 public class Controller {
 
 	private Login login;
@@ -23,16 +23,16 @@ public class Controller {
 	
 	public Controller(Login login) {
 		this.login = login;
-		this.control();
 	}
 	
 	public Controller(Login login, Cadastro cadastro, BaseDados bd) {
 		this.login = login;
 		this.cadastro = cadastro;
 		this.baseDados = bd;
-		this.control();
 	}
 	
+	
+	// Usando classe internar anônima para tratar os eventos
 	public void control() {
 		login.getConfirmarButton().addActionListener(new ActionListener() {			
 			@Override

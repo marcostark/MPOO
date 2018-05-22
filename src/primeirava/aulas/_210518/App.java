@@ -13,6 +13,7 @@ public class App {
 		
 		BaseDados bd = new BaseDados();
 		
-		Controller controle = new Controller(login,cadastro, bd);
+		Controller controller = new Controller(login,cadastro, bd);
+		controller.control();
 	}
 }
