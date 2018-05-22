@@ -59,7 +59,7 @@ Em resumo, gerar um hash é como gerar um ID numérico para o objeto. O número 
 Internamente, no Java por exemplo, essa tabela é um vetor. A cada posição do vetor é atribuído uma faixa de números. Seria como slots de uma prateleira.
 
 ### PROBLEMATICA 2: 
-	https://github.com/marcostark/MPOO/tree/master/src/primeirava/exercicios/exe2
+https://github.com/marcostark/MPOO/tree/master/src/primeirava/exercicios/exe2
 
 ### QUESTIONAMENTO 5: O garbage coletor do java é usado por quem ?
 "A JVM executa coleta de lixo automática para recuperar a memória ocupada por objetos que não são mais usados. Quando não há mais referências a um objeto, o objeto é marcado para coleta de lixo. A coleta normalmente ocorre quando a JVM executa o coletor de lixo, o que pode não acontecer por um tempo, ou até
@@ -129,7 +129,9 @@ Uma das implementações possivéis é por meio de métodos abstratos, onde as c
 
 ### EXERICIO 4: MAPA mental sobre o que foi visto nas aulas passadas
 
-### EXERICIO 5: Aula 16: Separar a classe ButtonHundler em outro arquivo
+### EXERICIO 5: Aula 16: Separar a classe ButtonHundler em outro arquivo 
+
+https://github.com/marcostark/MPOO/tree/master/src/primeirava/aulas/_140518/controller
 
 ### EXERICIO 6: Modelar Corpo Humano usando agregação
 
