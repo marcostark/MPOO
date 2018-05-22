@@ -1,7 +1,8 @@
 # MPOO
 Códigos da disciplina de Modelagem e Programação Orientada a Objetos
 
-## Site da disciplina: http://sites.google.com/site/profricodemery/mpoo
+### Site da disciplina: 
+	http://sites.google.com/site/profricodemery/mpoo
 
 ### Data das avaliações: 
     VA 1 - 18/06 
@@ -58,15 +59,15 @@ Em resumo, gerar um hash é como gerar um ID numérico para o objeto. O número 
 Internamente, no Java por exemplo, essa tabela é um vetor. A cada posição do vetor é atribuído uma faixa de números. Seria como slots de uma prateleira.
 
 ### PROBLEMATICA 2: 
-	Gerenciar dados de fruta
+	https://github.com/marcostark/MPOO/tree/master/src/primeirava/exercicios/exe2
 
-### QUESTIONAMENTO 5: O que do java que usa e gerencia o garbage coletor
+### QUESTIONAMENTO 5: O garbage coletor do java é usado por quem ?
 "A JVM executa coleta de lixo automática para recuperar a memória ocupada por objetos que não são mais usados. Quando não há mais referências a um objeto, o objeto é marcado para coleta de lixo. A coleta normalmente ocorre quando a JVM executa o coletor de lixo, o que pode não acontecer por um tempo, ou até
 mesmo absolutamente antes de um programa terminar" - DEITEL
 
 ### QUESTIONAMENTO 6: Como as outras linguagens de programação contornam o uso de herança multipla, herdando o mesmo atributo (mesmo nome);
 
-# Fonte: http://www.aizac.info/a-solution-to-the-diamond-problem-in-python/
+#### Fonte: http://www.aizac.info/a-solution-to-the-diamond-problem-in-python/
 
 	class A():
 	    def call(self):
@@ -124,7 +125,7 @@ mesmo absolutamente antes de um programa terminar" - DEITEL
 	me.wichCall()
 
 ### QUESTIONAMENTO 7: Como obrigar as especializações a implementarem os metodos. Animal anda, mas em pé ou de quatro patas
-Uma das implementações possivél é por meio de métodos abstratos, onde as classes filhas(Concretas) serão obrigadas a implementas tais métodos.
+Uma das implementações possivéis é por meio de métodos abstratos, onde as classes filhas(Concretas) serão obrigadas a implementar tais métodos.
 
 ### EXERICIO 4: MAPA mental sobre o que foi visto nas aulas passadas
 
