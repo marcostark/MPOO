@@ -48,6 +48,14 @@ public class Controller {
 			}
 		});
 		
+		login.getCadastrarButton().addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Mensagem.exibirMensagem("Cadastrar Usuarios!");
+			}
+		});
+		
+				
 		cadastro.getConfirmarButton().addActionListener(new ActionListener() {					
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -61,10 +69,26 @@ public class Controller {
 				Mensagem.exibirMensagem("Remover Usuario!");
 			}
 		});
-		cadastro.getExibirButton().addActionListener(new ActionListener() {			
+		cadastro.getCadastrarButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Mensagem.exibirMensagem("Mostrar Usuarios");
+			}
+		});
+		
+		cadastro.getFemRadioButton().addActionListener(new ActionListener() {			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
+		
+		cadastro.getMascRadioButton().addActionListener(new ActionListener() {			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
 			}
 		});
 	}

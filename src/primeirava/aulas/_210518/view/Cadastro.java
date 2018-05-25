@@ -1,22 +1,40 @@
 package primeirava.aulas._210518.view;
 
-import javax.swing.JButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JRadioButton;
 
 public class Cadastro extends Login{
+	
+	private JRadioButton mascRadioButton;
+	private JRadioButton femRadioButton;
+	private ButtonGroup buttonGroup;
 
-	private JButton exibirButton;
 	private static final long serialVersionUID = 1L;
 	
-	public Cadastro(String tituloJanela, int x, int y, String nomeButao1, String nomeButao2) {
-		super(tituloJanela, x, y, nomeButao1, nomeButao2);
+	public Cadastro(String tituloJanela, int x, int y, String nomeBotao1, String nomeBotao2, String nomeBotao3) {
+		super(tituloJanela, x, y, nomeBotao1, nomeBotao2, nomeBotao3);
+			
+		mascRadioButton = new JRadioButton("Masculino", false);
+		femRadioButton = new JRadioButton("Feminino", false);
 		
-		exibirButton = new JButton("Exibir");
-		add(exibirButton);
+		add(mascRadioButton);
+		add(femRadioButton);
 		
+		buttonGroup = new ButtonGroup();
+		buttonGroup.add(mascRadioButton);
+		buttonGroup.add(femRadioButton);
+		
+		//add(buttonGroup);		
 		setVisible(true); // Erro de logica, implementar nas especializações
 	}
 
-	public JButton getExibirButton() {
-		return exibirButton;
+	public JRadioButton getMascRadioButton() {
+		return mascRadioButton;
 	}
+
+	public JRadioButton getFemRadioButton() {
+		return femRadioButton;
+	}
+	
+	
 }
