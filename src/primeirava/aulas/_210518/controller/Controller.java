@@ -4,6 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import primeirava.aulas._210518.model.BaseDados;
+import primeirava.aulas._210518.model.Caixa;
+import primeirava.aulas._210518.model.Gerente;
+import primeirava.aulas._210518.model.Usuario;
 import primeirava.aulas._210518.view.Login;
 import primeirava.aulas._210518.view.Mensagem;
 import primeirava.aulas._210518.view.Cadastro;
@@ -34,10 +37,18 @@ public class Controller {
 	
 	// Usando classe interna anônima para tratar os eventos
 	public void control() {
+		
+//		cadastro.setVisible(false);
+		
 		login.getConfirmarButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Mensagem.exibirMensagem("Login!");
+				if (baseDados.validarUsuario(new Caixa(login.getLoginField().getText(), login.getSenhaField().getText()))) {
+					Mensagem.exibirMensagem("Login!");
+				} else {
+					Mensagem.exibirMensagem("Dados invalidos!");
+				}
+				
 			}
 		});
 		
@@ -51,7 +62,10 @@ public class Controller {
 		login.getCadastrarButton().addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Mensagem.exibirMensagem("Cadastrar Usuarios!");
+				login.dispose();
+				cadastro.setVisible(true);
+				//cadastro.requestFocus();
+				//Mensagem.exibirMensagem("Cadastrar Usuarios!");
 			}
 		});
 		
@@ -59,20 +73,34 @@ public class Controller {
 		cadastro.getConfirmarButton().addActionListener(new ActionListener() {					
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Mensagem.exibirMensagem("Adicionar Usuario!");		
+				Usuario user = new Gerente(cadastro.getLoginField().getText(), cadastro.getSenhaField().getText());
+				if (baseDados.addUsuario(user)) {
+					Mensagem.exibirMensagem("Usuario adicionado com sucesso!");
+					cadastro.dispose();
+					login.setVisible(true);
+				} else {
+					Mensagem.exibirMensagem("Erro!");
+				}
+						
 			}
 			
 		});
 		cadastro.getSairButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Mensagem.exibirMensagem("Remover Usuario!");
+				Usuario user = new Gerente(cadastro.getLoginField().getText(), cadastro.getSenhaField().getText());
+				if(baseDados.removeUsuario(user)){
+					Mensagem.exibirMensagem("Usuario removido com sucesso!");
+				} else {
+					Mensagem.exibirMensagem("Erro!");
+				}
 			}
 		});
 		cadastro.getCadastrarButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Mensagem.exibirMensagem("Mostrar Usuarios");
+				baseDados.exibirUsuario();
+//				Mensagem.exibirMensagem("Mostrar Usuarios");
 			}
 		});
 		

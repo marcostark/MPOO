@@ -9,7 +9,7 @@ public class App {
 	
 	public static void main(String[] args) {	
 		Login login = new Login("Login", 280,200, "Confirmar", "Sair", "Cadastrar");
-		Cadastro cadastro = new Cadastro("Cadastro", 280,200, "Add", "Remover","Exibir");
+		Cadastro cadastro = new Cadastro("Cadastro", 280,240, "Add", "Remover","Exibir");
 		
 		BaseDados bd = new BaseDados();
 		

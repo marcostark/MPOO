@@ -1,55 +1,61 @@
 package primeirava.aulas._210518.model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class BaseDados {
 	
-	private static List<Usuario> usuarios = new ArrayList<Usuario>();
+	public static ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+		
 	
 	public boolean addUsuario(Usuario usuario) {
-		
-		for (Usuario user: usuarios) {
-			if(user.getLogin().equalsIgnoreCase(user.getLogin())) {
+			if(usuarios.contains(buscarUsuario(usuario))) {
 				return false;
 			}
-		}
-			return usuarios.add(usuario);
+		return usuarios.add(usuario);
 	}
 	
-	public boolean removeUsuario(Usuario usuario) {
-		for(Usuario user: usuarios) {
-			if(user.getLogin().contains(usuario.getLogin())) {
-				return usuarios.remove(usuario);
-			}
-		}
-		return false;
+	
+	public boolean removeUsuario(Usuario usuario) {		
+			return usuarios.remove(buscarUsuario(usuario));	
 	}
 	
-	public static void exibirUsuario() {
-		usuarios.forEach(l -> System.out.println(l.getLogin()));		
+	public void exibirUsuario() {
+		usuarios.forEach(l -> System.out.println(l));		
 	}
-		
+			
 	// É possivel implementar de outra forma
-	public static boolean validarUsuario(Usuario usuario) {
-		/*
+	public boolean validarUsuario(Usuario usuario) {
+		
 		for(Usuario user: usuarios) {
-			if(user.getLogin().contains(usuario.getLogin())
-					&& user.getLogin().equals(usuario.getSenha())) {
+			if(user.getLogin().equalsIgnoreCase(usuario.getLogin())
+					&& user.getSenha().equals(usuario.getSenha())) {
 				return true;
 			}
-		}*/
-		
-		return  usuarios.contains(usuario);
-		
+		}
+		return false;		
 	}
 	
-	public static void main(String[] args) {
-		
-		Usuario user1 = new Caixa("Marcos", "0123");
-		BaseDados.validarUsuario(user1);
-		
+	private Usuario buscarUsuario(Usuario usuario) {
+		for(Usuario user : usuarios) {
+			if(user.getLogin().equalsIgnoreCase(usuario.getLogin())) {
+				return user;
+			}
+		}
+		return null;
 	}
 	
+//	public static void main(String[] args) {
+//		
+//		BaseDados bd = new BaseDados();
+//		
+//		Usuario user1 = new Gerente("Souza", "0123");
+//		Usuario user2 = new Caixa("Patricia", "0123");
+//		Usuario user3 = new Gerente("Patricia", "0123");
+//		bd.addUsuario(user1);
+//		bd.addUsuario(user2);
+//		bd.addUsuario(user3);
+//		
+//		bd.exibirUsuario();		
+//	}
+//	
 }

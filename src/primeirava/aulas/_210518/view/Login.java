@@ -66,17 +66,14 @@ public class Login extends JFrame{
 	}
 
 
-
 	public JButton getSairButton() {
 		return sairButton;
 	}
 
 
-
 	public JTextField getLoginField() {
 		return loginField;
 	}
-
 
 
 	public JTextField getSenhaField() {
@@ -88,7 +85,6 @@ public class Login extends JFrame{
 	public JLabel getLoginLabel() {
 		return loginLabel;
 	}
-
 
 
 	public JLabel getSenhaLabel() {

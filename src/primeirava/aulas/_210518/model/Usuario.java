@@ -1,6 +1,6 @@
 package primeirava.aulas._210518.model;
 
-abstract class Usuario {
+public abstract class Usuario {
 
 	private String login;
 	private String senha;
@@ -31,6 +31,6 @@ abstract class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario: "+ this.getLogin() + " Senha" + this.getLogin();
+		return "Usuario: "+ this.getLogin() + " Senha: " + this.getSenha();
 	}	
 }

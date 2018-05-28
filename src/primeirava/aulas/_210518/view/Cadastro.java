@@ -5,9 +5,10 @@ import javax.swing.JRadioButton;
 
 public class Cadastro extends Login{
 	
-	private JRadioButton mascRadioButton;
-	private JRadioButton femRadioButton;
-	private ButtonGroup buttonGroup;
+	private JRadioButton mascRadioButton, femRadioButton;
+	private JRadioButton gerenteRadioButton, caixaRadioButton;
+	private ButtonGroup buttonGroupSexo;
+	private ButtonGroup buttonGroupFuncao;
 
 	private static final long serialVersionUID = 1L;
 	
@@ -17,15 +18,24 @@ public class Cadastro extends Login{
 		mascRadioButton = new JRadioButton("Masculino", false);
 		femRadioButton = new JRadioButton("Feminino", false);
 		
+		gerenteRadioButton = new JRadioButton("Gerente", false);
+		caixaRadioButton = new JRadioButton("Caixa", false);
+		
 		add(mascRadioButton);
 		add(femRadioButton);
+		add(gerenteRadioButton);
+		add(caixaRadioButton);
 		
-		buttonGroup = new ButtonGroup();
-		buttonGroup.add(mascRadioButton);
-		buttonGroup.add(femRadioButton);
+		buttonGroupSexo = new ButtonGroup();
+		buttonGroupSexo.add(mascRadioButton);
+		buttonGroupSexo.add(femRadioButton);
+		
+		buttonGroupFuncao = new ButtonGroup();
+		buttonGroupFuncao.add(gerenteRadioButton);
+		buttonGroupFuncao.add(caixaRadioButton);
 		
 		//add(buttonGroup);		
-		setVisible(true); // Erro de logica, implementar nas especializações
+		setVisible(false); // Erro de logica, implementar nas especializações
 	}
 
 	public JRadioButton getMascRadioButton() {
