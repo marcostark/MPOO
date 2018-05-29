@@ -4,11 +4,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import primeirava.aulas._210518.model.BaseDados;
+import primeirava.aulas._210518.model.Caixa;
+import primeirava.aulas._210518.model.Gerente;
+import primeirava.aulas._210518.model.Usuario;
 import primeirava.aulas._210518.view.Login;
 import primeirava.aulas._210518.view.Mensagem;
 import primeirava.aulas._210518.view.Cadastro;
 
-// MVC tratado na propria classe
+// MVC 
 public class Controller {
 
 	private Login login;
@@ -16,28 +19,36 @@ public class Controller {
 	private BaseDados baseDados;
 
 	/* 
-	 * Os models e views são atributos do controlador,
+	 * Models e views são atributos do controlador,
 	 * depende da aplicação, se serão criados aqui ou não
 	 *  
 	 * */
 	
 	public Controller(Login login) {
 		this.login = login;
-		this.control();
 	}
 	
 	public Controller(Login login, Cadastro cadastro, BaseDados bd) {
 		this.login = login;
 		this.cadastro = cadastro;
 		this.baseDados = bd;
-		this.control();
 	}
 	
+	
+	// Usando classe interna anônima para tratar os eventos
 	public void control() {
+		
+//		cadastro.setVisible(false);
+		
 		login.getConfirmarButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Login!");
+				if (baseDados.validarUsuario(new Caixa(login.getLoginField().getText(), login.getSenhaField().getText()))) {
+					Mensagem.exibirMensagem("Login!");
+				} else {
+					Mensagem.exibirMensagem("Dados invalidos!");
+				}
+				
 			}
 		});
 		
@@ -48,23 +59,64 @@ public class Controller {
 			}
 		});
 		
+		login.getCadastrarButton().addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				login.dispose();
+				cadastro.setVisible(true);
+				//cadastro.requestFocus();
+				//Mensagem.exibirMensagem("Cadastrar Usuarios!");
+			}
+		});
+		
+				
 		cadastro.getConfirmarButton().addActionListener(new ActionListener() {					
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Confirmar Cadastro!");		
+				Usuario user = new Gerente(cadastro.getLoginField().getText(), cadastro.getSenhaField().getText());
+				if (baseDados.addUsuario(user)) {
+					Mensagem.exibirMensagem("Usuario adicionado com sucesso!");
+					cadastro.dispose();
+					login.setVisible(true);
+				} else {
+					Mensagem.exibirMensagem("Erro!");
+				}
+						
 			}
 			
 		});
 		cadastro.getSairButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Sair do cadastro!");
+				Usuario user = new Gerente(cadastro.getLoginField().getText(), cadastro.getSenhaField().getText());
+				if(baseDados.removeUsuario(user)){
+					Mensagem.exibirMensagem("Usuario removido com sucesso!");
+				} else {
+					Mensagem.exibirMensagem("Erro!");
+				}
 			}
 		});
-		cadastro.getExibirButton().addActionListener(new ActionListener() {			
+		cadastro.getCadastrarButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Exibir Botão");
+				baseDados.exibirUsuario();
+//				Mensagem.exibirMensagem("Mostrar Usuarios");
+			}
+		});
+		
+		cadastro.getFemRadioButton().addActionListener(new ActionListener() {			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
+		
+		cadastro.getMascRadioButton().addActionListener(new ActionListener() {			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
 			}
 		});
 	}

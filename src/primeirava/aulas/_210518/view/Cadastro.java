@@ -1,22 +1,50 @@
 package primeirava.aulas._210518.view;
 
-import javax.swing.JButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JRadioButton;
 
 public class Cadastro extends Login{
+	
+	private JRadioButton mascRadioButton, femRadioButton;
+	private JRadioButton gerenteRadioButton, caixaRadioButton;
+	private ButtonGroup buttonGroupSexo;
+	private ButtonGroup buttonGroupFuncao;
 
-	private JButton exibirButton;
 	private static final long serialVersionUID = 1L;
 	
-	public Cadastro(String tituloJanela, int x, int y, String nomeButao1, String nomeButao2) {
-		super(tituloJanela, x, y, nomeButao1, nomeButao2);
+	public Cadastro(String tituloJanela, int x, int y, String nomeBotao1, String nomeBotao2, String nomeBotao3) {
+		super(tituloJanela, x, y, nomeBotao1, nomeBotao2, nomeBotao3);
+			
+		mascRadioButton = new JRadioButton("Masculino", false);
+		femRadioButton = new JRadioButton("Feminino", false);
 		
-		exibirButton = new JButton("Exibir");
-		add(exibirButton);
+		gerenteRadioButton = new JRadioButton("Gerente", false);
+		caixaRadioButton = new JRadioButton("Caixa", false);
 		
-		setVisible(true); // Erro de logica, implementar nas especializações
+		add(mascRadioButton);
+		add(femRadioButton);
+		add(gerenteRadioButton);
+		add(caixaRadioButton);
+		
+		buttonGroupSexo = new ButtonGroup();
+		buttonGroupSexo.add(mascRadioButton);
+		buttonGroupSexo.add(femRadioButton);
+		
+		buttonGroupFuncao = new ButtonGroup();
+		buttonGroupFuncao.add(gerenteRadioButton);
+		buttonGroupFuncao.add(caixaRadioButton);
+		
+		//add(buttonGroup);		
+		setVisible(false); // Erro de logica, implementar nas especializações
 	}
 
-	public JButton getExibirButton() {
-		return exibirButton;
+	public JRadioButton getMascRadioButton() {
+		return mascRadioButton;
 	}
+
+	public JRadioButton getFemRadioButton() {
+		return femRadioButton;
+	}
+	
+	
 }

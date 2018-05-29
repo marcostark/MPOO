@@ -12,37 +12,35 @@ import javax.swing.JTextField;
  * */
 public class Login extends JFrame{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JButton confirmarButton;
 	private JButton sairButton;
+	private JButton cadastrarButton;
 	
 	private JTextField loginField;
 	private JTextField senhaField;
 	
 	private JLabel loginLabel;
-	private JLabel senhaLabel;
+	private JLabel senhaLabel;	
 	
-	private JButton addButton;
-	private JButton removeButton;
-	private JButton exibirButton;
-	
-	//public Login(String tituloJanela, int x, int y, String nomeButao1, String nomeButao2) {
-	//	super(tituloJanela);
-	//}
-	
-	public Login(String tituloJanela, int x, int y, String nomeButao1, String nomeButao2) {
+	public Login(String tituloJanela, int x, int y, String nomeBotao1, String nomeBotao2, String nomeBotao3) {
 		super(tituloJanela);		
 		
 		setSize(x, y);
 		setLocationRelativeTo(null);
-		setLayout(new FlowLayout());
+		setLayout(new FlowLayout(FlowLayout.CENTER , 10,20));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
 		
-		confirmarButton = new JButton(nomeButao1);
-		sairButton = new JButton(nomeButao2);
+		confirmarButton = new JButton(nomeBotao1);
+		sairButton = new JButton(nomeBotao2);
+		cadastrarButton = new JButton(nomeBotao3);		
 		
-		loginField = new JTextField(5);
-		senhaField = new JTextField(5);
+		loginField = new JTextField(15);
+		senhaField = new JTextField(15);
 		
 		loginLabel = new JLabel("Login");
 		senhaLabel = new JLabel("Senha");
@@ -56,19 +54,16 @@ public class Login extends JFrame{
 		add(senhaLabel);
 		add(senhaField);
 		add(confirmarButton);
-		add(sairButton);		
+		add(sairButton);
+		add(cadastrarButton);
 		
-		setVisible(true);		
-		
+		setVisible(true);				
 		
 	}
-
-
 
 	public JButton getConfirmarButton() {
 		return confirmarButton;
 	}
-
 
 
 	public JButton getSairButton() {
@@ -76,11 +71,9 @@ public class Login extends JFrame{
 	}
 
 
-
 	public JTextField getLoginField() {
 		return loginField;
 	}
-
 
 
 	public JTextField getSenhaField() {
@@ -94,9 +87,14 @@ public class Login extends JFrame{
 	}
 
 
-
 	public JLabel getSenhaLabel() {
 		return senhaLabel;
+	}
+
+
+
+	public JButton getCadastrarButton() {
+		return cadastrarButton;
 	}
 	
 	

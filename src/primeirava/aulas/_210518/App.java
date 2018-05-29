@@ -8,11 +8,12 @@ import primeirava.aulas._210518.view.Login;
 public class App {
 	
 	public static void main(String[] args) {	
-		Login login = new Login("Login", 150,200, "Confirmar", "Sair");
-		Cadastro cadastro = new Cadastro("Cadastrp", 150,200, "Add", "Remover");
+		Login login = new Login("Login", 280,200, "Confirmar", "Sair", "Cadastrar");
+		Cadastro cadastro = new Cadastro("Cadastro", 280,240, "Add", "Remover","Exibir");
 		
 		BaseDados bd = new BaseDados();
 		
-		Controller controle = new Controller(login,cadastro, bd);
+		Controller controller = new Controller(login,cadastro, bd);
+		controller.control();
 	}
 }
