@@ -30,3 +30,6 @@
 
 ### Alt + Shift + R
 	- Renomear refatorando
+	
+### CTRL + PgDn e  CTRL + PgUp
+	- Para navegar entre as abas abertas
