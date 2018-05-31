@@ -1,12 +1,13 @@
-package variados.caelumfj11;
+package br.com.caelum.contas.modelo;
+
+import variados.caelumfj11.Cliente;
+import variados.caelumfj11.Data;
 
 public class Conta {
 	
-	private static int totalContasCriadas;
 	private String agencia;
 	private int numero;
-	private Cliente cliente;
-	private Data data;
+	private String titular;
 	private double saldo;
 	
 	/**
@@ -15,18 +16,10 @@ public class Conta {
 	 */
 	
 	public Conta() {}
-	public Conta(int numero, String agencia, Cliente cliente, double saldo, Data data) {
+	public Conta(int numero, String agencia, String titular) {
 		this.numero = numero;
 		this.agencia = agencia;
-		this.cliente = cliente;
-		this.saldo = saldo;
-		this.data = data;
-		
-		this.totalContasCriadas += 1;
-	}
-	
-	public static int getTotalContasCriadas() {
-		return totalContasCriadas;
+		this.titular = titular;
 	}
 	
 	/**
@@ -74,11 +67,11 @@ public class Conta {
 		this.agencia = agencia;
 	}
 	
-	public Cliente getCliente() {
-		return cliente;
+	public String getTitular() {
+		return titular;
 	}
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
+	public void setTitular(String titular) {
+		this.titular = titular;
 	}
 	public double getSaldo() {
 		return saldo;
@@ -88,21 +81,15 @@ public class Conta {
 		return agencia;
 	}	
 	
-	public Data getData() {
-		return data;
-	}
-	
 	@Override
 	public String toString() {
 		return "-----------------------" + 
-				"\nTitular: " + this.cliente.getNome() +
+				"\nTitular: " + this.titular +
 				"\nSaldo: " + this.saldo +
 				"\nNumero: " + this.numero +
 				"\nSaldo: " + this.agencia +
-				"\nData de abertura: " + this.data +
 				"\n-----------------------";
 	}
-	
-	
 
 }
+
