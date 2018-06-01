@@ -1,7 +1,7 @@
 package br.com.caelum.contas.modelo;
 
-import variados.caelumfj11.Cliente;
-import variados.caelumfj11.Data;
+import variados.caelumfj11.banco.Cliente;
+import variados.caelumfj11.banco.Data;
 
 public class Conta {
 	
@@ -20,6 +20,10 @@ public class Conta {
 		this.numero = numero;
 		this.agencia = agencia;
 		this.titular = titular;
+	}
+	
+	public String getTipo() {
+		return "Conta";
 	}
 	
 	/**

@@ -1,4 +1,4 @@
-package variados.caelumfj11;
+package variados.caelumfj11.banco;
 
 public class Cliente {
 	
