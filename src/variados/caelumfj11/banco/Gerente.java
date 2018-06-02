@@ -1,6 +1,6 @@
 package variados.caelumfj11.banco;
 
-public class Gerente extends Funcionario{
+public class Gerente extends Funcionario implements Autenticavel{
 	
 	private int senha;
 	private int numDeFuncionariosGerenciados;
@@ -13,6 +13,7 @@ public class Gerente extends Funcionario{
 		this.numDeFuncionariosGerenciados = numDeFuncionariosGerenciados;
 	}
 
+	@Override
 	public boolean autentica(int senha) {
 		if(this.senha == senha) {
 			System.out.println("Acesso permitido!");
@@ -25,10 +26,10 @@ public class Gerente extends Funcionario{
 	
 	@Override
 	public double getBonificacao() {
-		return super.getBonificacao() + 1000;
+//		return super.getBonificacao() + 1000;
 		// Chama o metodo da classe mãe adicionado 1000 ao valor retornado por ela
 		
-//		return this.getSalario() * 0.15;
+		return this.getSalario() * 1.4 + 1000;
 	}	
 	
 	// Sobrescrevendo o metodo da classe mãe

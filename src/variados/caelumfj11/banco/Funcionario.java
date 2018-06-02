@@ -15,10 +15,9 @@ public abstract class Funcionario {
 		this.salario = salario;
 	}
 
-	public double getBonificacao() {
-		return this.salario * 0.10;
-	}
-	
+	// Será obrigatório que as classes filhas(concretas) implementem o método
+	public abstract double getBonificacao();
+		
 	// Getters and Setters
 	public String getNome() {
 		return nome;
