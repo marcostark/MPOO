@@ -15,7 +15,7 @@ public class TransmutacaoHumana {
 //		Dedo dedoPeDireito = new Dedo(0.1,peDireito);
 //		Dedo dedoPeEsquerdo = new Dedo(0.15,peEsquerdo);
 		
-		Braco braco = new Braco(2.0, corpo);
+		Braco braco = new Braco(2.0);
 //		Braco bracoEsquerdo = new Braco(1.5);
 		
 		Mao mao = new Mao(2.0, braco);
@@ -28,10 +28,10 @@ public class TransmutacaoHumana {
 		
 		System.out.println("Corpo Humano" + ""
 				+ "\n\nLado Direito"
-				+ "\nCorpo: " +corpo.peso + ""
-				+ "\nBraco: " +corpo.braco.peso + ""
-				+ "\nMão: " + corpo.braco.mao.peso + ""
-				+ "\nDedo: " + mao.dedo.peso + ""
+				//+ "\nCorpo: " +corpo.peso + ""
+				+ "\nBraco: " +braco.peso + ""
+				+ "\nMão: " + braco.mao.peso + ""
+				+ "\nDedo: " + braco.mao.dedo + ""
 				
 //				+ "\nPerna: " +pernaDireita.peso + ""
 //				+ "\nPé: " +pernaDireita.peDireito.peso + ""
