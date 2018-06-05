@@ -1,15 +1,15 @@
-package primeirava.aulas._210518.controller;
+package primeirava.aulas._040618.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import primeirava.aulas._210518.model.BaseDados;
-import primeirava.aulas._210518.model.Caixa;
-import primeirava.aulas._210518.model.Gerente;
-import primeirava.aulas._210518.model.Usuario;
-import primeirava.aulas._210518.view.Login;
-import primeirava.aulas._210518.view.Mensagem;
-import primeirava.aulas._210518.view.Cadastro;
+import primeirava.aulas._040618.model.BaseDados;
+import primeirava.aulas._040618.model.Caixa;
+import primeirava.aulas._040618.model.Gerente;
+import primeirava.aulas._040618.model.Usuario;
+import primeirava.aulas._040618.view.Login;
+import primeirava.aulas._040618.view.Mensagem;
+import primeirava.aulas._040618.view.Cadastro;
 
 // MVC 
 public class Controller {
@@ -62,8 +62,8 @@ public class Controller {
 		login.getCadastrarButton().addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//login.dispose();
-				//cadastro.setVisible(true);
+				login.dispose();
+				cadastro.setVisible(true);
 				//cadastro.requestFocus();
 				//Mensagem.exibirMensagem("Cadastrar Usuarios!");
 			}

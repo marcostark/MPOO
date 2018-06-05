@@ -1,4 +1,4 @@
-package primeirava.aulas._210518_refactor.model;
+package primeirava.aulas._040618.model;
 
 import java.util.ArrayList;
 
@@ -19,18 +19,8 @@ public class BaseDados {
 			return usuarios.remove(buscarUsuario(usuario));	
 	}
 	
-	// Erro MVC, quem exibi é View, model contém CRUD no exemplo consultar
-	//public void exibirUsuario() {
-	//	usuarios.forEach(l -> System.out.println(l));		
-	//}
-	
-	public ArrayList<String> consultarUsuarios(){
-		
-		ArrayList<String> users = new ArrayList<String>();
-		for (Usuario user: usuarios) {
-			users.add(user.getLogin());
-		}
-		return users;
+	public void exibirUsuario() {
+		usuarios.forEach(l -> System.out.println(l));		
 	}
 			
 	// É possivel implementar de outra forma

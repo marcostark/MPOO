@@ -21,10 +21,10 @@ public abstract class Tela extends JFrame{
 	
 	private JButton jButton1;
 	private JButton jButton2;
-	private JButton jButton3;
+	//private JButton jButton3;
 
 	
-	public Tela(String tituloJanela, int x, int y, String nomeBotao1, String nomeBotao2, String nomeBotao3) {
+	public Tela(String tituloJanela, int x, int y, String nomeBotao1, String nomeBotao2) {
 		
 
 		setTitle(tituloJanela);
@@ -42,18 +42,21 @@ public abstract class Tela extends JFrame{
 		
 		jButton1 = new JButton(nomeBotao1);
 		jButton2 = new JButton(nomeBotao2);
-		jButton3 = new JButton(nomeBotao3);		
+		//jButton3 = new JButton(nomeBotao3);		
 		
 		add(loginLabel);
 		add(loginField);
 		add(senhaLabel);
 		add(senhaField);
 
+		
+		//add(jButton3);
+		//loadButtons();
+	}
+	
+	public void loadButtons() {
 		add(jButton1);
 		add(jButton2);
-		add(jButton3);
-		
-
 	}
 	
 	public JTextField getLoginField() {
@@ -71,6 +74,7 @@ public abstract class Tela extends JFrame{
 	public JLabel getSenhaLabel() {
 		return senhaLabel;
 	}
+	
 	public JButton getConfirmarButton() {
 		return jButton1;
 	}
@@ -78,9 +82,4 @@ public abstract class Tela extends JFrame{
 	public JButton getSairButton() {
 		return jButton2;
 	}
-
-	public JButton getCadastrarButton() {
-		return jButton3;
-	}
-
 }

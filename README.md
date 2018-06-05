@@ -143,5 +143,30 @@ https://github.com/marcostark/MPOO/tree/master/src/primeirava/aulas/_140518/cont
 ### EXERICIO 10: Criar tela abstrata (Login) e suas especializações implementarão adicionarão os elementos na tela. Na  tela de cadastro será preciso informar o sexo do usuario (Implementar atributo "sexo" na classe usuario)
 		
 
+### QUESIONAMENTO: Um objeto criado dentro de um evento, ele deixa de existir quando o evento for consumido (Classe interna anônima)
 
+### VER PADRÃO DE PROJETO OBSERVER
+
+### VALENDO PONTO: Sistema de ata
+	Requisitos:
+		Tela inicial para escolher fazer a chamada por Disciplinas ou Professor
+			Usar ComboBox para escolher Disciplinas
+				Disciplina: Listar todos os Periodos (ComboBox)
+							Ao escolher a disciplina já mostrará o professor que leciona a mesma (Não Editavél))
+		A Tela de chamada será preenchida com as informações dos Alunos e professor cadastrados no arquivo
+			Informações: 
+				Data da chamada
+				A presença por ser feita usando um checkbox
+							
+	P.S.: ARMAZENAMENTO EM ARQUIVO (XML)
+							
+		
+		
+		
+		
+		
+		
+		
+		
+		
  

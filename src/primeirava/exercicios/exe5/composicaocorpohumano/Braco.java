@@ -4,14 +4,10 @@ public class Braco {
 
 	double peso;
 	Mao mao;	
-//	Mao maoEsquerda;
-		
-	//public Braco(Corpo corpo) {}
-	public Braco(double peso) {
-		this.mao = new Mao(this);
-		this.peso = peso;
-		
-		
-	}
 
+	public Braco(Corpo corpo) {}
+	
+	public Braco(Braco braco, Mao mao) {
+		braco.mao = mao;
+	}
 }

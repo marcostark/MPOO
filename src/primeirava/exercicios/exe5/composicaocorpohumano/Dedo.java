@@ -5,9 +5,8 @@ public class Dedo {
 	double peso;
 	
 	public Dedo(Mao mao) {}
-	public Dedo(Braco braco) {}
 	
-	public Dedo(double peso,Mao mao) {
+	public Dedo(Mao mao,double peso) {
 		mao.dedo.peso = peso;
-	}	
+	}
 }

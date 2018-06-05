@@ -51,8 +51,8 @@ public class ControllerLogin {
 		login.getCadastrarButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-//				Cadastro cadastro = new Cadastro("Cadastro", 280,240, "Add", "Remover","Exibir");
-//				ControllerCadastro controller = new ControllerCadastro(cadastro, baseDados);				
+				Cadastro cadastro = new Cadastro("Login", 280,300, "Remover Usuários", "Sair");
+				ControllerCadastro controller = new ControllerCadastro(cadastro, baseDados);				
 			}
 		});
 		
