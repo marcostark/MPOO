@@ -1,24 +1,31 @@
+
 package primeirava.aulas._040618.view;
 
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JRadioButton;
 
-public class Cadastro extends Login{
+import primeirava.aulas._040618.controller.ControllerCadastro;
+
+public class Cadastro extends Tela{
 	
 	private JRadioButton mascRadioButton, femRadioButton;
 	private JRadioButton gerenteRadioButton, caixaRadioButton;
 	private ButtonGroup buttonGroupSexo;
 	private ButtonGroup buttonGroupFuncao;
+	private JButton cadastrarButton;
+	private JButton exibirButton;
 
 	private static final long serialVersionUID = 1L;
 	
-	public Cadastro(String tituloJanela, int x, int y, String nomeBotao1, String nomeBotao2, String nomeBotao3) {
-		super(tituloJanela, x, y, nomeBotao1, nomeBotao2, nomeBotao3);
-			
-		mascRadioButton = new JRadioButton("Masculino", false);
+	public Cadastro(String tituloJanela, int x, int y, String nomeBotao1, String nomeBotao2) {
+		super(tituloJanela, x, y, nomeBotao1, nomeBotao2);
+		
+		setTitle("Cadastro");
+		mascRadioButton = new JRadioButton("Masculino", true);
 		femRadioButton = new JRadioButton("Feminino", false);
 		
-		gerenteRadioButton = new JRadioButton("Gerente", false);
+		gerenteRadioButton = new JRadioButton("Gerente", true);
 		caixaRadioButton = new JRadioButton("Caixa", false);
 		
 		add(mascRadioButton);
@@ -34,8 +41,12 @@ public class Cadastro extends Login{
 		buttonGroupFuncao.add(gerenteRadioButton);
 		buttonGroupFuncao.add(caixaRadioButton);
 		
-		//add(buttonGroup);		
-		setVisible(false); // Erro de logica, implementar nas especializações
+		cadastrarButton = new JButton("Cadastrar");
+		exibirButton = new JButton("Exibir");
+		add(cadastrarButton);
+		add(exibirButton);
+		loadButtons();
+		setVisible(true);
 	}
 
 	public JRadioButton getMascRadioButton() {
@@ -46,5 +57,29 @@ public class Cadastro extends Login{
 		return femRadioButton;
 	}
 	
-	
+	public JButton getCadastrarButton() {
+		return cadastrarButton;
+	}
+
+	public JRadioButton getGerenteRadioButton() {
+		return gerenteRadioButton;
+	}
+
+	public JRadioButton getCaixaRadioButton() {
+		return caixaRadioButton;
+	}
+		
+	public JButton getExibirButton() {
+		return exibirButton;
+	}
+
+	public static void main(String[] args) {
+		
+		new Cadastro("Login", 280,300, "Remover", "Sair");
+		
+		//BaseDados bd = new BaseDados();
+		//ControllerCadastro controller = new ControllerCadastro(cad, bd);
+		//controller.control();
+		
+	}
 }
