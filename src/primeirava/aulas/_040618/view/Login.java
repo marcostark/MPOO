@@ -3,7 +3,7 @@ package primeirava.aulas._040618.view;
 import javax.swing.JButton;
 
 /*
- * MVC com tratamenteo de Eventos na propria classe
+ * MVC com tratamento de Eventos na propria classe
  * */
 public class Login extends Tela{
 	
@@ -22,9 +22,12 @@ public class Login extends Tela{
 	}
 	
 	public void control(){
-		loadButtons();
+		//Botões herdados da classe mãe
+		add(getConfirmarButton());
+		add(getSairButton());
+		
 		cadastrarButton = new JButton("Cadastrar");
-		add(cadastrarButton);
+		add(cadastrarButton);		
 	}
 
 	public JButton getCadastrarButton() {

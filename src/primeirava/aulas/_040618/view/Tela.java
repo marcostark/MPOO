@@ -21,11 +21,15 @@ public abstract class Tela extends JFrame{
 	
 	private JButton jButton1;
 	private JButton jButton2;
-	//private JButton jButton3;
-
 	
 	public Tela(String tituloJanela, int x, int y, String nomeBotao1, String nomeBotao2) {
 		
+		try {
+			javax.swing.UIManager
+					.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
 
 		setTitle(tituloJanela);
 		setSize(x, y);
@@ -42,16 +46,13 @@ public abstract class Tela extends JFrame{
 		
 		jButton1 = new JButton(nomeBotao1);
 		jButton2 = new JButton(nomeBotao2);
-		//jButton3 = new JButton(nomeBotao3);		
-		
+				
+		// Componentes padrão nas especializações
 		add(loginLabel);
 		add(loginField);
 		add(senhaLabel);
 		add(senhaField);
 
-		
-		//add(jButton3);
-		//loadButtons();
 	}
 	
 	public void loadButtons() {

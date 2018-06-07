@@ -9,7 +9,7 @@ import primeirava.aulas._040618.view.Login;
 public class App {
 	
 	public static void main(String[] args) {	
-		Login login = new Login("Login", 280,220, "Confirmar", "Sair");
+		Login login = new Login("Login", 280,200, "Confirmar", "Sair");
 		
 		BaseDados bd = new BaseDados();
 		ControllerLogin controller = new ControllerLogin(login, bd);

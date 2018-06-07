@@ -30,6 +30,7 @@ public class ControllerCadastro {
 		cadastro.getSairButton().addActionListener(buttonHundler);
 	}
 
+	// Usando classe interna para tratar os eventos dos botões
 	private class ButtonHundler implements ActionListener {
 
 		@Override

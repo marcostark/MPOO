@@ -5,8 +5,6 @@ import java.awt.event.ActionListener;
 
 import primeirava.aulas._040618.model.BaseDados;
 import primeirava.aulas._040618.model.Caixa;
-import primeirava.aulas._040618.model.Gerente;
-import primeirava.aulas._040618.model.Usuario;
 import primeirava.aulas._040618.view.Login;
 import primeirava.aulas._040618.view.Mensagem;
 import primeirava.aulas._040618.view.Cadastro;
@@ -32,7 +30,6 @@ public class ControllerLogin {
 		this.baseDados = bd;
 	}
 	
-	
 	// Usando classe interna anônima para tratar os eventos
 	public void control() {
 		
@@ -51,7 +48,7 @@ public class ControllerLogin {
 		login.getCadastrarButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Cadastro cadastro = new Cadastro("Login", 280,300, "Remover Usuários", "Sair");
+				Cadastro cadastro = new Cadastro("Login", 240,300, "Remover Usuários", "Sair");
 				ControllerCadastro controller = new ControllerCadastro(cadastro, baseDados);
 				controller.control();
 			}

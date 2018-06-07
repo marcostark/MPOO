@@ -5,8 +5,6 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
 
-import primeirava.aulas._040618.controller.ControllerCadastro;
-
 public class Cadastro extends Tela{
 	
 	private JRadioButton mascRadioButton, femRadioButton;
@@ -45,7 +43,11 @@ public class Cadastro extends Tela{
 		exibirButton = new JButton("Exibir");
 		add(cadastrarButton);
 		add(exibirButton);
-		loadButtons();
+		
+		//Botoes herdados da classe mãe
+		add(getConfirmarButton());
+		add(getSairButton());
+		
 		setVisible(true);
 	}
 
@@ -71,15 +73,5 @@ public class Cadastro extends Tela{
 		
 	public JButton getExibirButton() {
 		return exibirButton;
-	}
-
-	public static void main(String[] args) {
-		
-		new Cadastro("Login", 280,300, "Remover", "Sair");
-		
-		//BaseDados bd = new BaseDados();
-		//ControllerCadastro controller = new ControllerCadastro(cad, bd);
-		//controller.control();
-		
 	}
 }
