@@ -36,6 +36,7 @@ public class ControllerLogin {
 		login.getConfirmarButton().addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				//Caixa caixa = new Caixa(login.getLoginField().getText(), login.getSenhaField().getText());
 				if (baseDados.validarUsuario(new Caixa(login.getLoginField().getText(), login.getSenhaField().getText()))) {
 					Mensagem.exibirMensagem("Login!");
 				} else {
