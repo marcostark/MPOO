@@ -2,30 +2,35 @@ package primeirava.aulas.revisao.app;
 
 import java.util.ArrayList;
 
+import primeirava.aulas.revisao.controller.BancoController;
+import primeirava.aulas.revisao.model.BaseDeDados;
 import primeirava.aulas.revisao.model.Cliente;
 import primeirava.aulas.revisao.model.Conta;
 import primeirava.aulas.revisao.model.ContaCorrente;
 import primeirava.aulas.revisao.model.ContaPoupanca;
+import primeirava.aulas.revisao.view.Banco;
 
 public class App {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		
-		
-		ArrayList<Conta> contas = new ArrayList<Conta>();
-		
+		BaseDeDados bd = new BaseDeDados();
+				
 		ContaCorrente cc = new ContaCorrente(0, 123456);
-		contas.add(cc);
+		bd.cadastrar(cc);
 		Cliente cliente = new Cliente(cc,"ze", "000.000.000-00");
 		
 		ContaPoupanca cp = new ContaPoupanca(2.0, 1);
-		contas.add(cp);
+		bd.cadastrar(cp);
 		cliente = new Cliente(cp,"Maria", "111.111.111-11");
 		
-		for (Conta conta: contas) {
-			System.out.println(conta.getCliente().getNome());
-			System.out.println(conta.getSaldo());
-		}
+		ArrayList<Conta> contas = bd.buscarTodos();
+		
+		contas.forEach(c-> System.out.println("CPF: " + c.getCliente().getCpf() + "\nNumero: " + c.getNumero() + "\n"));
+		
+		Banco banco = new Banco();
+		BancoController bc = new BancoController(banco);
+		bc.control();
 	}
 	
 	// QUESTIONAMENTO 4: Validar CPF
@@ -38,18 +43,7 @@ public class App {
 	// QUESTIONAMENTO 7: Trocar a composição entre cliente e conta. Usar arraylist
 	// QUESIONAMENTO 8: Criar numero dinamico para criação de conta (Usar atributo statico)
 	
-	/* FAZER TELA
-	 * 
-	 * 
-	 * conta a
-	 * 	numero: textfield
-	 * 	saldo
-	 * 
-	 * conta (destino)
-	 * 	numero
-	 * 	saldo (não editavel)
-	 * 
-	 * Dar a possibilidade de escolher entre corrente e poupanca
+	/* Dar a possibilidade de escolher entre corrente e poupanca
 	 * 
 	 * 
 	 * 
