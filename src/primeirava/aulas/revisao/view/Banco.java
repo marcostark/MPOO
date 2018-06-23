@@ -122,7 +122,5 @@ public class Banco extends JFrame{
 	public JTextField getSaldoDestinoField() {
 		return saldoDestinoField;
 	}	
-	
-	
 }
 

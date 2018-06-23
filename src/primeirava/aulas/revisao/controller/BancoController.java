@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 import primeirava.aulas.revisao.model.BaseDeDados;
-import primeirava.aulas.revisao.model.Conta;
 import primeirava.aulas.revisao.view.Banco;
 
 public class BancoController {

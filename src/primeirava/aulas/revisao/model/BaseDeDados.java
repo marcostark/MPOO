@@ -25,9 +25,22 @@ public class BaseDeDados {
 	
 	public void editar(Conta conta) {}
 	
-	public ArrayList<Conta>buscaConta() {
+//	public ArrayList<Conta>buscaConta() {
+//		ArrayList<Conta> listaContas = new ArrayList<>();
+//		for(Conta c: contas) {
+//			contas.add(c);
+//	}
+//	
+	public void buscar() {}
+	
+	public void remover() {}
+	
+	public void editar() {}
+	
+	public ArrayList<Conta> buscarTodos() {
+		
 		ArrayList<Conta> listaContas = new ArrayList<>();
-		for(Conta c: contas) {
+		for(Conta c:contas) {
 			listaContas.add(c);
 		}
 		return listaContas;

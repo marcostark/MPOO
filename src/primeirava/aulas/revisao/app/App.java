@@ -13,7 +13,7 @@ import primeirava.aulas.revisao.view.Banco;
 
 public class App {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		
 		
 		List<Conta> contas = new ArrayList<>();
@@ -27,7 +27,7 @@ public class App {
 		bd.cadastrar(cp);
 		cliente = new Cliente(cp,"Maria", "111.111.111-11");
 		
-		contas = bd.buscaConta();
+//		contas = bd.buscaConta();
 		
 		contas.forEach(
 						c -> System.out.println("\nNome: "+ c.getCliente().getNome() + 
@@ -37,9 +37,15 @@ public class App {
 						));				
 				
 		Banco banco = new Banco();
+		
+		ArrayList<Conta> listaDeContas = bd.buscarTodos();
+		
+		contas.forEach(c-> System.out.println("CPF: " + c.getCliente().getCpf() + "\nNumero: " + c.getNumero() + "\n"));
+		
 		BancoController bc = new BancoController(banco);
 		bc.control();
 		
+		//Apenas um teste
 	}
 	
 	// QUESTIONAMENTO 4: Validar CPF
@@ -52,18 +58,7 @@ public class App {
 	// QUESTIONAMENTO 7: Trocar a composição entre cliente e conta. Usar arraylist
 	// QUESIONAMENTO 8: Criar numero dinamico para criação de conta (Usar atributo statico)
 	
-	/* FAZER TELA
-	 * 
-	 * 
-	 * conta a
-	 * 	numero: textfield
-	 * 	saldo
-	 * 
-	 * conta (destino)
-	 * 	numero
-	 * 	saldo (não editavel)
-	 * 
-	 * Dar a possibilidade de escolher entre corrente e poupanca
+	/* Dar a possibilidade de escolher entre corrente e poupanca
 	 * 
 	 * 
 	 * 
