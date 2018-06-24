@@ -6,7 +6,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 import primeirava.aulas.revisao.model.BaseDeDados;
+import primeirava.aulas.revisao.model.ContaCorrente;
 import primeirava.aulas.revisao.view.Banco;
+import primeirava.aulas.revisao.view.Mensagem;
 
 public class BancoController {
 	
@@ -34,9 +36,13 @@ public class BancoController {
 			if(e.getSource() == banco.getConfirmarButton()) {
 				
 				// VER ISSO
-				//Conta conta = bd.buscar(banco.getNumeroDestinoField().getText()); 				
+				if (bd.buscar(banco.getNumeroDestinoField().getText()) instanceof ContaCorrente) { 				
+					Mensagem.mostrarMensagem("Conta Corrente");
+				} else {
+					Mensagem.mostrarMensagem("Conta Poupança ");
+				}
 				
-				JOptionPane.showMessageDialog(null, "Tranferir Dinheiro");
+				//Mensagem.mostrarMensagem("Tranferencia Dinheiro");
 			}
 			
 		}

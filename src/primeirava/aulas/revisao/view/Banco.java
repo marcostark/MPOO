@@ -37,7 +37,6 @@ public class Banco extends JFrame{
 		setLocationRelativeTo(null);
 		setLayout(new FlowLayout());
 		control();
-		//pack();
 		setVisible(true);
 		
 	}

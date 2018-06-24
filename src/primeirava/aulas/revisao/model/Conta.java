@@ -43,6 +43,6 @@ public abstract class Conta {
 
 	@Override
 	public String toString() {
-		return "Saldo: " + this.saldo;
+		return "Conta [saldo = " + saldo + ", numero = " + numero + ", cliente = " + cliente + "]";
 	}
 }

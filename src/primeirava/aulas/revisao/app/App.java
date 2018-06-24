@@ -19,11 +19,11 @@ public class App {
 		List<Conta> contas = new ArrayList<>();
 		BaseDeDados bd = new BaseDeDados();
 				
-		ContaCorrente cc = new ContaCorrente(0, 123456);
+		ContaCorrente cc = new ContaCorrente(0, 1234);
 		bd.cadastrar(cc);
 		Cliente cliente = new Cliente(cc,"ze", "000.000.000-00");
 		
-		ContaPoupanca cp = new ContaPoupanca(200, 1);
+		ContaPoupanca cp = new ContaPoupanca(200, 2468);
 		bd.cadastrar(cp);
 		cliente = new Cliente(cp,"Maria", "111.111.111-11");
 		
