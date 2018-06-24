@@ -1,6 +1,6 @@
 package primeirava.aulas.revisao;
 
-public class Funcionario implements Caixa, Gerente, SuperFuncionario{
+public class Funcionario implements Caixa, Gerente{
 
 	@Override
 	public void darDesconto(Produto p, double desconto) {
