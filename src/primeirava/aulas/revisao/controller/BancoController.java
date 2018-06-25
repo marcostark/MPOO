@@ -26,6 +26,14 @@ public class BancoController {
 	public void control() {
 		
 		banco.getConfirmarButton().addActionListener(new ButtonHundler());
+		banco.getConfirmarButton().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 	}
 	
