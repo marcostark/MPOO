@@ -11,31 +11,20 @@ public class BaseDeDados {
 		contas.add(conta);		
 	}
 	
-	public Conta buscar(String numero) {
-		
+	public Conta buscar(int numero) {
 		for(Conta c: contas) {
-			if(numero.equals(c.getNumero())) {
+			if(c.getNumero() == numero) {
 				return c;
 			}
 		}
-		return null;		
+		return null;
 	}
 	
 	public void remover(Conta conta) {}
 	
-	public void editar(Conta conta) {}
-	
-//	public ArrayList<Conta>buscaConta() {
-//		ArrayList<Conta> listaContas = new ArrayList<>();
-//		for(Conta c: contas) {
-//			contas.add(c);
-//	}
-//	
 	public void buscar() {}
 	
 	public void remover() {}
-	
-	public void editar() {}
 	
 	public ArrayList<Conta> buscarTodos() {
 		
