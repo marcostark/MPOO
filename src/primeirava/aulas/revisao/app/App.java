@@ -27,22 +27,16 @@ public class App {
 		bd.cadastrar(cp);
 		cliente = new Cliente(cp,"Maria", "111.111.111-11");
 		
-//		contas = bd.buscaConta();
+		ContaPoupanca cp1 = new ContaPoupanca(1000, 4321);
+		bd.cadastrar(cp1);
+		cliente = new Cliente(cp1,"Maria", "122.122.122-12");
 		
-		contas.forEach(
-						c -> System.out.println("\nNome: "+ c.getCliente().getNome() + 
-						"\nNumero: " + c.getNumero() + "\nCPF: " + 
-						c.getCliente().getCpf() + 
-						"\nSaldo: " + c.getSaldo()
-						));				
+		contas = bd.buscarTodos();
+		
+		//contas.forEach(c -> System.out.println(c));				
 				
 		Banco banco = new Banco();
-		
-		ArrayList<Conta> listaDeContas = bd.buscarTodos();
-		
-		contas.forEach(c-> System.out.println("CPF: " + c.getCliente().getCpf() + "\nNumero: " + c.getNumero() + "\n"));
-		
-		BancoController bc = new BancoController(banco);
+		BancoController bc = new BancoController(banco, bd);
 		bc.control();
 		
 		//Apenas um teste
