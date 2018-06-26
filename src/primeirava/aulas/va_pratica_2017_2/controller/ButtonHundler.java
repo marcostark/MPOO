@@ -1,9 +1,9 @@
-package primeirava.aulas.va1.controller;
+package primeirava.aulas.va_pratica_2017_2.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import primeirava.aulas.va1.view.Login;
+import primeirava.aulas.va_pratica_2017_2.view.Login;
 
 public class ButtonHundler implements ActionListener {
 
@@ -22,7 +22,7 @@ public class ButtonHundler implements ActionListener {
 		}
 		
 		if(e.getSource() == login.getSairButton()) {
-			System.out.println("Fechar janela de login");
+			this.login.setVisible(false);
 		}
 		
 	}

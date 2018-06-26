@@ -1,9 +1,9 @@
-package primeirava.aulas.va1.controller;
+package primeirava.aulas.va_pratica_2017_2.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import primeirava.aulas.va1.view.Cadastro;
+import primeirava.aulas.va_pratica_2017_2.view.Cadastro;
 
 public class CadastroController {
 	
@@ -19,7 +19,7 @@ public class CadastroController {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				System.out.println("Cadastrar");
 			}
 		});
 		
@@ -27,7 +27,7 @@ public class CadastroController {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				cadastro.setVisible(false);
 			}
 		});
 

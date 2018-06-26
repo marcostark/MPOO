@@ -1,4 +1,4 @@
-package primeirava.aulas.va1.model;
+package primeirava.aulas.va_pratica_2017_2.model;
 
 public class Pessoa {
 	

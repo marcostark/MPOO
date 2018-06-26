@@ -1,6 +1,6 @@
-package primeirava.aulas.va1.controller;
+package primeirava.aulas.va_pratica_2017_2.controller;
 
-import primeirava.aulas.va1.view.Login;
+import primeirava.aulas.va_pratica_2017_2.view.Login;
 
 public class LoginController {
 	

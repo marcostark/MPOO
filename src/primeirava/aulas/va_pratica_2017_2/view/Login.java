@@ -1,4 +1,4 @@
-package primeirava.aulas.va1.view;
+package primeirava.aulas.va_pratica_2017_2.view;
 
 public class Login extends Tela{
 
@@ -7,6 +7,7 @@ public class Login extends Tela{
 
 		setTitle("Login");
 		setSize(240,200);
+		setDefaultCloseOperation(HIDE_ON_CLOSE);
 		control();
 		setVisible(true);	
 		

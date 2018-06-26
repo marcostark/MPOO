@@ -1,4 +1,4 @@
-package primeirava.aulas.va1.view;
+package primeirava.aulas.va_pratica_2017_2.view;
 
 public class Cadastro extends Tela{
 	
@@ -11,7 +11,8 @@ public class Cadastro extends Tela{
 	public Cadastro() {
 		
 		setTitle("Cadastrar");
-		setSize(220,240);		
+		setSize(220,240);	
+		setDefaultCloseOperation(HIDE_ON_CLOSE);
 		control();
 		setVisible(true);	
 		

@@ -1,7 +1,11 @@
-package primeirava.aulas.va1.view;
+package primeirava.aulas.va_pratica_2017_2.view;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import primeirava.aulas.va_pratica_2017_2.controller.CadastroController;
+import primeirava.aulas.va_pratica_2017_2.controller.LoginController;
+import primeirava.exercicios.extras._02.view.Cadastrar;
 
 public class Menu extends Tela implements ActionListener{
 	
@@ -32,7 +36,7 @@ public class Menu extends Tela implements ActionListener{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Sair do Sistema");
+				System.exit(0);
 			}
 		});
 		
@@ -47,10 +51,11 @@ public class Menu extends Tela implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource() == this.getCadastrarButton()) {
-			System.out.println("Cadastrar");
+			Cadastro cadastro = new Cadastro();
+			new CadastroController(cadastro).control();
 		}
 		if(e.getSource() == this.getAddButton()) {
-			System.out.println("Logar");
+			new LoginController(new Login()).control();
 		}
 	}
 	
