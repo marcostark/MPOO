@@ -1,7 +1,11 @@
 package primeirava.aulas.va_pratica_2018_2.sistemaSupermercado.view;
 
+import java.text.SimpleDateFormat;
+import java.util.logging.SimpleFormatter;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -19,7 +23,7 @@ public class TelaCadastro extends TelaBasica{
 	
 	private JTextField nomeField;
 	private JTextField precoField;
-	private JTextField validadeField;
+	private JFormattedTextField validadeField;
 	
 	private ButtonGroup tipoGroup;
 	private JRadioButton perecivelRadio;
@@ -44,7 +48,10 @@ public class TelaCadastro extends TelaBasica{
 		
 		nomeField = new JTextField(10);
 		precoField = new JTextField(10);
-		validadeField = new JTextField(10);
+		validadeField = new JFormattedTextField(new 
+				SimpleDateFormat("yyyy.MM.dd"));
+		
+		validadeField.setValue(new java.util.Date());
 		
 		perecivelRadio = new JRadioButton("Perecível");
 		naoPerecivelRadio = new JRadioButton("Não Perecível");
@@ -63,6 +70,9 @@ public class TelaCadastro extends TelaBasica{
 		
 		add(validadeLabel);
 		add(validadeField);
+		
+		add(perecivelRadio);
+		add(naoPerecivelRadio);
 		
 		add(addButton);
 		add(sairButton);
@@ -87,10 +97,6 @@ public class TelaCadastro extends TelaBasica{
 
 	public JTextField getValidadeField() {
 		return validadeField;
-	}
-
-	public void setValidadeField(JTextField validadeField) {
-		this.validadeField = validadeField;
 	}
 
 	public JButton getAddButton() {
