@@ -9,6 +9,8 @@ Códigos da disciplina de Modelagem e Programação Orientada a Objetos
     VA 3 - 
     VA 4 -
 
+# Primeira VA
+
 ### QUESTIONAMENTO 1: Como garantir a interoperabilidade de sistemas através da semântica de definições Orientada a Objetos. Ex.: Book equivale a Book.
 
 Para o Institute of Electrical and Electronics Engineers (IEEE) a interoperabilidade é a capacidade de um sistema ou produto, de funcionar com outros sistemas ou produtos, sem nenhum tipo de esforço especial por parte de um cliente. Segundo o instituto, a interoperabilidade é possível apenas a partir da aplicação de normas e do uso de padrões. Nesse sentido, a interoperabilidade está atrelada a cooperação, normalizada por especificações, políticas e padrões que viabilizem o intercâmbio integrado de informações.
@@ -143,7 +145,7 @@ https://github.com/marcostark/MPOO/tree/master/src/primeirava/aulas/_140518/cont
 ### EXERICIO 10: Criar tela abstrata (Login) e suas especializações implementarão adicionarão os elementos na tela. Na  tela de cadastro será preciso informar o sexo do usuario (Implementar atributo "sexo" na classe usuario)
 		
 
-### QUESIONAMENTO: Um objeto criado dentro de um evento, ele deixa de existir quando o evento for consumido (Classe interna anônima)
+### QUESIONAMENTO 8: Um objeto criado dentro de um evento, ele deixa de existir quando o evento for consumido (Classe interna anônima)
 
 ### VER PADRÃO DE PROJETO OBSERVER
 
@@ -161,7 +163,15 @@ https://github.com/marcostark/MPOO/tree/master/src/primeirava/aulas/_140518/cont
 	P.S.: ARMAZENAMENTO EM ARQUIVO (XML)
 							
 		
-		
+# Segunda VA
+
+### Questionamento 1: Como eu faço para setar o tamanho de um setBounds
+
+### Questionamento 1: Como fazer para implementar apenas um metodos da interface KeyEvent (KeyReleased, ReyTyped, KeyPresses)
+
+### Questionamento 2: Como fazer o personagem se movimentar na diagonal ao apertar dois botões ao mesmo tempo e fazer o movimento oblícuo.
+
+### Questionamento 4: Como implementar colisão em java?
 		
 		
 		
