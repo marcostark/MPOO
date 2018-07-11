@@ -167,7 +167,8 @@ https://github.com/marcostark/MPOO/tree/master/src/primeirava/aulas/_140518/cont
 
 ### Questionamento 1: Como eu faço para setar o tamanho de um setBounds
 
-### Questionamento 1: Como fazer para implementar apenas um metodos da interface KeyEvent (KeyReleased, ReyTyped, KeyPresses)
+### Questionamento 1: Como fazer para implementar apenas um metodos da interface KeyEvent (KeyReleased, KeyTyped, KeyPresses)
+	Usando herança para extender da classe KeyAdapter, após isso pode escolher o metodo que deseja implementar.
 
 ### Questionamento 2: Como fazer o personagem se movimentar na diagonal ao apertar dois botões ao mesmo tempo e fazer o movimento oblícuo.
 
