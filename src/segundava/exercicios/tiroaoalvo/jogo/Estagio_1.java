@@ -30,6 +30,8 @@ public class Estagio_1 extends JFrame implements MouseListener, MouseMotionListe
 	public JLabel labelFlecha;
 	public JLabel labelFlechaCaida;
 	public JLabel labelBackground;
+	private JLabel labelAlvo2;
+	private Alvo alvo2;
 
 	public Estagio_1() 
 	{
@@ -48,6 +50,7 @@ public class Estagio_1 extends JFrame implements MouseListener, MouseMotionListe
 	
 		arco = new Arco();
 		alvo = new Alvo(20, 100, new Dimension(150, 150));
+		alvo2 = new Alvo(900, 100, new Dimension(150, 150));
 		flecha = new Flecha(0, 0);
 		
 		labelArco = new JLabel(arco.imagem);
@@ -57,6 +60,10 @@ public class Estagio_1 extends JFrame implements MouseListener, MouseMotionListe
 		labelAlvo = new JLabel(alvo.imagem);
 		labelAlvo.setBounds(alvo.x, alvo.y, alvo.tamanho.width, alvo.tamanho.height);
 		labelAlvo.setCursor(getToolkit().createCustomCursor(new BufferedImage(3,3,BufferedImage.TYPE_INT_ARGB), new Point(0,0), "null"));
+		
+		labelAlvo2 = new JLabel(alvo2.imagem);
+		labelAlvo2.setBounds(alvo2.x, alvo2.y, alvo2.tamanho.width, alvo2.tamanho.height);
+		labelAlvo2.setCursor(getToolkit().createCustomCursor(new BufferedImage(3,3,BufferedImage.TYPE_INT_ARGB), new Point(0,0), "null"));
 
 		labelFlecha = new JLabel();
 		labelFlecha.setVisible(false);
@@ -74,6 +81,7 @@ public class Estagio_1 extends JFrame implements MouseListener, MouseMotionListe
 		add(labelArco);
 		add(labelFlecha);
 		add(labelAlvo);
+		add(labelAlvo2);
 		add(labelFlechaCaida);
 		add(labelBackground);
 		
@@ -115,7 +123,8 @@ public class Estagio_1 extends JFrame implements MouseListener, MouseMotionListe
 	public void mouseExited(MouseEvent arg0){}
 	public void mousePressed(MouseEvent arg0){}
 	public void mouseReleased(MouseEvent arg0)
-	{		
+	{	
+		// Alvo um
 		if(arg0.getX() >= alvo.x && arg0.getX() <= alvo.x + alvo.tamanho.width)
 		{	
 			// Acertou o alvo
@@ -128,7 +137,23 @@ public class Estagio_1 extends JFrame implements MouseListener, MouseMotionListe
 
 			System.out.println("acertou");
 			new PequenaPausa().start();
-		} 
+		}
+		
+		// Alvo dois
+		if(arg0.getX() >= alvo2.x && arg0.getX() <= alvo2.x + alvo2.tamanho.width)
+		{	
+			// Acertou o alvo
+			alvo2.movimento = false;
+
+			flecha = new Flecha(arg0.getX() - 76, 105);
+			labelFlecha.setIcon(flecha.imagem);
+			labelFlecha.setBounds(flecha.x, flecha.y, 150, 149);
+			labelFlecha.setVisible(true);			
+
+			System.out.println("acertou");
+			new PequenaPausa().start();
+		}
+		
 		else 
 		{
 			flechaCaida = new Flecha(arg0.getX() - 76, 105);
@@ -168,14 +193,36 @@ public class Estagio_1 extends JFrame implements MouseListener, MouseMotionListe
 		}
 	}
 
+	// Responsavel pela movimentação dos alvos
 	private class Movimento extends Thread 
 	{
 		public void run()
 		{
 			synchronized (this) 
 			{
-				while(true) 
-				{
+				while(true)
+				{					
+					// Alvo2
+					if(alvo2.movimento && alvo2.direita) 
+					{
+						alvo2.x += 1;
+						if(alvo2.x >= 870) 
+						{
+							alvo2.direita = false;	
+						}
+					} 
+					else if(alvo2.movimento && !alvo2.direita) 
+					{
+						alvo2.x -= 1;
+
+						if(alvo2.x <= 20) 
+						{
+							alvo2.direita = true;
+						}
+					}
+					
+					
+					// Alvo 1
 					if(alvo.movimento && alvo.direita) 
 					{
 						alvo.x += 1;
@@ -200,6 +247,7 @@ public class Estagio_1 extends JFrame implements MouseListener, MouseMotionListe
 					} catch(InterruptedException e) {e.printStackTrace();}
 
 					labelAlvo.setBounds(alvo.x, alvo.y, alvo.tamanho.width, alvo.tamanho.height);
+					labelAlvo2.setBounds(alvo2.x, alvo2.y, alvo2.tamanho.width, alvo2.tamanho.height);
 
 				}//while
 			}//synchronized
