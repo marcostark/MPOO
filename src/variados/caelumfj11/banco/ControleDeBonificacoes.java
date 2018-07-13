@@ -1,6 +1,6 @@
 package variados.caelumfj11.banco;
 
-public class ControleDeBonificações {
+public class ControleDeBonificacoes {
 	
 	public double totalDeBonificacoes = 0;
 	

@@ -4,7 +4,7 @@ public class TestaGerente {
 	
 	public static void main(String[] args) {
 		
-		ControleDeBonificações controle = new ControleDeBonificações();
+		ControleDeBonificacoes controle = new ControleDeBonificacoes();
 
 		Secretaria secretaria = new Secretaria();
 		secretaria.setNome("Souza");	
