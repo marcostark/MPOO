@@ -1,0 +1,78 @@
+public int[][] carregaMatriz(int[][] matz, String arquivo) {
+		ArrayList<String> arqText = new ArrayList<String>();
+		InputStream is = getClass().getResourceAsStream (arquivo);
+		BufferedReader br = new BufferedReader (new InputStreamReader (is));   
+		String linha="";
+		try {
+
+			while ((linha = br.readLine()) != null){
+				System.out.println(linha);
+				arqText.add(linha);
+			}
+			
+			
+			for (int i = 0; i < arqText.size(); i++) {
+				String aux = arqText.get(i).replace(",", "");
+				arqText.set(i, aux);
+			}
+
+//			System.out.println(arqText.size());
+//			System.out.println(arqText.get(0).length());
+			
+			for (int i = 0; i < arqText.size(); i++) {
+				int começo = 0;
+				int fim = 1;
+				int k = 0;
+				for (int j = 0; j < arqText.get(i).length(); j += 1) {
+					String tile = arqText.get(i).substring(começo, fim);
+					matz[i][k] = Integer.parseInt(tile);
+					começo += 1;
+					fim += 1;
+					k++;
+				}
+
+			}
+		} catch (FileNotFoundException fileNotFoundException) {
+			System.out.println("nao carregou arquivo mapa");
+			System.exit(0);
+		}
+		catch (IOException ioException) {
+			System.out.println("erro na leitura do mapa");
+			System.exit(0);
+		}
+		return matz;
+	}
+
+
+
+
+
+
+
+
+	public void montarMapa(int lar, int alt) {
+
+		camada = new BufferedImage(lar, alt, BufferedImage.TYPE_4BYTE_ABGR);
+
+		int posX = 0;
+		int posY = 0;
+		for (int i = 0; i < mapa.length; i++) {
+			for (int j = 0; j < mapa[0].length; j++) {
+				camada.getGraphics().drawImage(tileSet, posX, posY,
+						posX + tileWidth, posY + tileHeight,
+						(mapa[i][j] % 4) * tileWidth, 0,
+						(mapa[i][j] % 4) * tileHeight + tileHeight, tileHeight, null);
+				posX += tileWidth;
+			}
+			posY += tileHeight;
+			posX = 0;
+		}
+	}
+
+
+
+
+
+
+
+

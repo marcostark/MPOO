@@ -14,7 +14,7 @@ public class PainelGame extends JFrame {
 	private Elemento player1;
 	private Elemento player2;
 	
-	private int larg = 50; // Padrão
+	private int larg = 50; // Padrï¿½o
 	
 	private boolean jogando = true;
 	private final int VELOCIDADE = 4;
@@ -53,12 +53,12 @@ public class PainelGame extends JFrame {
 				g.fillRect(0, 0, tela.getWidth(), tela.getHeight());
 				
 				g.setColor(Color.BLUE);
-				g.fillRect(player1.x,player1.y, player1.largura, player1.altura); // Posição e tamanho do quadrado
-				g.drawString("Posição atual: " 
+				g.fillRect(player1.x,player1.y, player1.largura, player1.altura); // PosiÃ§Ã£o e tamanho do quadrado
+				g.drawString("Posiï¿½ï¿½o atual: " 
 						+ player1.x + "x" + player1.y, 5, 10);
 				
 				g.setColor(Color.GREEN);
-				g.fillRect(420,100, player2.largura, player2.altura); // Posição e tamanho do quadrado
+				g.fillRect(420,100, player2.largura, player2.altura); // PosiÃ§Ã£o e tamanho do quadrado
 				
 			}
 			
@@ -82,14 +82,14 @@ public class PainelGame extends JFrame {
 		long prxAtualizacao = 0;
 		while(jogando) {
 			if(System.currentTimeMillis() >= prxAtualizacao){
-				update(); // Atualizando o tratamento dos eventos de teclado, tudo é uma única thread
+				update(); // Atualizando o tratamento dos eventos de teclado, tudo ï¿½ uma ï¿½nica thread
 				tela.repaint();
 				prxAtualizacao = System.currentTimeMillis() + FPS;
 			}
 		}
 	}
 	
-	// Metodo que cuida da atualização do objeto na tela
+	// Metodo que cuida da atualizaï¿½ï¿½o do objeto na tela
 		public void update() {
 			
 			if(controlaTecla[0])
@@ -104,7 +104,7 @@ public class PainelGame extends JFrame {
 			else if (controlaTecla[3])
 				player1.x += player1.velocidade;
 			
-			// Se o jogador sair por um lado da tela, aparecerá no outro
+			// Se o jogador sair por um lado da tela, aparecerï¿½ no outro
 			
 			if(player1.x < 0) 
 				player1.x = tela.getWidth() - player1.largura;
@@ -126,7 +126,7 @@ public class PainelGame extends JFrame {
 			}
 		}
 	
-	// Solução para melhorar a perfomace dos comandos, uma vez que estão todos em uma única Thread
+	// Soluï¿½ï¿½o para melhorar a perfomace dos comandos, uma vez que estï¿½o todos em uma ï¿½nica Thread
 	protected void setaTecla(int tecla, boolean teclaPressionada) {
 		
 		switch (tecla) {
