@@ -8,6 +8,13 @@ public class UsuarioVO {
 	private String cpf;
 	private boolean isPCD;
 	
+	public UsuarioVO(String login, String senha, String nome) {
+		this.login = login;
+		this.senha = senha;
+		this.nome = nome;
+		//this.isPCD = pcd;
+	}
+	
 	public UsuarioVO(String login, String senha, String nome, boolean pcd) {
 		this.login = login;
 		this.senha = senha;

@@ -1,5 +1,7 @@
 package segundava._230718.model.dao;
 
+import java.util.ArrayList;
+
 import segundava._230718.model.vo.BaseDados;
 import segundava._230718.model.vo.UsuarioVO;
 import segundava._230718.model.vo.UsuariopcdVO;
@@ -19,11 +21,7 @@ public class UsuarioDAO {
 	private static boolean adicionarUsuarioRAM(UsuarioVO usuarioVO) {
 		return BaseDados.getUsuariosVOs().add(usuarioVO);		
 	}
-	
-	private static boolean adicionarUsuarioTXT(UsuarioVO usuarioVO) {
-		return false;
-	}
-	
+		
 	private static boolean adicionarUsuarioXML(UsuarioVO usuarioVO) {
 		return false;
 	}
@@ -74,9 +72,14 @@ public class UsuarioDAO {
 		return false;	
 	}
 	
-	public static boolean buscarUsuario(UsuariopcdVO usuariopcdVO) {
-		
+	public static boolean buscarUsuario(UsuariopcdVO usuariopcdVO) {		
 		return false;
+	}
+	
+	public ArrayList<UsuarioVO> listarUsuario(){
+		
+		return BaseDados.getUsuariosVOs();
+		
 	}
 
 }

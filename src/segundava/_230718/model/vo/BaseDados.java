@@ -14,6 +14,4 @@ public class BaseDados {
 		BaseDados.usuariosVOs = usuariosVOs;
 	}
 
-	
-
 }
