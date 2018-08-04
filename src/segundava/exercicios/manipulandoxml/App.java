@@ -7,7 +7,7 @@ public class App {
 		Pessoa p1 = new Pessoa("Marcos","12345684797");
 		Pessoa p2 = new Pessoa("Patricia","12345684797");
 		
-		
+		PessoaDAO.adicionarPessoa(p1);
 		
 	}
 

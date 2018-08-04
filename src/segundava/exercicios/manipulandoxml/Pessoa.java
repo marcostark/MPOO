@@ -1,5 +1,8 @@
 package segundava.exercicios.manipulandoxml;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("Pessoa")
 public class Pessoa {
 	
 	private String nome;
